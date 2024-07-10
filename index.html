@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Shooter Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: url('./images/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 2em;
+            border-radius: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .title {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+        .instructions {
+            font-size: 1.2em;
+            margin-bottom: 1.5em;
+        }
+        .start-button {
+            font-size: 1.5em;
+            padding: 0.5em 1em;
+            background: linear-gradient(45deg, #f00, #900);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .start-button:hover {
+            transform: scale(1.1);
+            background: linear-gradient(45deg, #900, #f00);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="title">Welcome to Asteroid Shooter Game</div>
+        <div class="instructions">
+            <p>Use W to move forward, A to rotate left, D to rotate right, and Space to shoot.</p>
+            <p>Destroy the asteroids and avoid collisions to survive as long as possible.</p>
+        </div>
+        <button class="start-button" onclick="startGame()">Start Game</button>
+    </div>
+
+    <script>
+        function startGame() {
+            window.location.href = 'game.html'; // Redirect to the game page
+        }
+    </script>
+</body>
+</html>
