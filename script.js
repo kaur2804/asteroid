@@ -45,7 +45,7 @@ class Player {
   }
 
   update() {
-    // wrap around edges
+     
     if (this.position.x > canvas.width) this.position.x = 0;
     else if (this.position.x < 0) this.position.x = canvas.width;
     if (this.position.y > canvas.height) this.position.y = 0;
@@ -287,13 +287,13 @@ animate();
 // controls
 window.addEventListener('keydown', (event) => {
   switch (event.code) {
-    case 'KeyW':
+    case 'KeyF':
       keys.f.pressed = true;
       break;
-    case 'KeyA':
+    case 'KeyL':
       keys.l.pressed = true;
       break;
-    case 'KeyD':
+    case 'KeyR':
       keys.r.pressed = true;
       break;
     case 'Space':
@@ -313,14 +313,15 @@ window.addEventListener('keydown', (event) => {
 
 window.addEventListener('keyup', (event) => {
   switch (event.code) {
-    case 'KeyW':
+    case 'KeyF':
       keys.f.pressed = false;
       break;
-    case 'KeyA':
+    case 'KeyL':
       keys.l.pressed = false;
       break;
-    case 'KeyD':
+    case 'KeyR':
       keys.r.pressed = false;
       break;
   }
 });
+
