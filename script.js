@@ -13,9 +13,9 @@ const PROJECTILE_SPEED = 3;
 
 // key state
 const keys = {
-  forward: { pressed: false },
-  left: { pressed: false },
-  right: { pressed: false }
+  f: { pressed: false },
+  l: { pressed: false },
+  r: { pressed: false }
 };
 
 // classes
@@ -106,13 +106,13 @@ animate();
 window.addEventListener('keydown',(event) =>{
   switch(event.code){
     case 'KeyW':
-      keys.forward.pressed=true;
+      keys.f.pressed=true;
       break;
     case 'KeyA':
-      keys.left.pressed=true;
+      keys.l.pressed=true;
       break;
     case 'KeyD':
-      keys.right.pressed=true;
+      keys.r.pressed=true;
       break;
     case 'Space':
       projectiles.push(
@@ -134,13 +134,14 @@ window.addEventListener('keydown',(event) =>{
 window.addEventListener('keyup',(event) =>{
   switch(event.code){
     case 'KeyW':
-      keys.forward.pressed=false;
+      keys.f.pressed=false;
       break;
     case 'KeyA':
-      keys.left.pressed=false;
+      keys.l.pressed=false;
       break;
     case 'KeyD':
-      keys.right.pressed=false;
+      keys.r.pressed=false;
       break;
   }
 });
+
