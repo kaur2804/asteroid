@@ -344,7 +344,7 @@ class Asteriods{
     switch(event.code){
         case 'KeyA':
              
-            keys.>.pressed=true;
+            keys.">".pressed=true;
         break;
 
         case 'KeyA':
@@ -393,6 +393,7 @@ class Asteriods{
    
    });
    
+
 
 
 
