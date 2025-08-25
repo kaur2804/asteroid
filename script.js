@@ -146,13 +146,13 @@ class Asteriods{
  
  
    const keys ={
-    w:{
+    >:{
         pressed:false
     },
-    a:{
+    <:{
         pressed:false
     },
-    d:{
+    ^:{
         pressed:false
     }
    }
@@ -324,16 +324,16 @@ class Asteriods{
 
     }
 
-    if(keys.w.pressed) {
+    if(keys.>.pressed) {
         player.velocity.x = Math.cos(player.rotation) * SPEED
         player.velocity.y = Math.sin(player.rotation) * SPEED
     }
-    else if(!keys.w.pressed){
+    else if(!keys.>.pressed){
         player.velocity.x *= FRICTION
         player.velocity.y *= FRICTION
     }
-    if(keys.d.pressed) player.rotation +=ROTATIONL_SPEED
-    else if(keys.a.pressed) player.rotation -=ROTATIONL_SPEED
+    if(keys.^.pressed) player.rotation +=ROTATIONL_SPEED
+    else if(keys.<.pressed) player.rotation -=ROTATIONL_SPEED
    
    
    }
@@ -342,18 +342,18 @@ class Asteriods{
    
    window.addEventListener('keydown',(event) =>{
     switch(event.code){
-        case 'KeyW':
+        case 'KeyA':
              
-            keys.w.pressed=true;
+            keys.>.pressed=true;
         break;
 
         case 'KeyA':
              
-            keys.a.pressed=true;
+            keys.<.pressed=true;
         break;
         case 'KeyD':
              
-            keys.d.pressed=true;
+            keys.^.pressed=true;
         break;
         case 'Space':
              
@@ -378,20 +378,21 @@ class Asteriods{
     switch(event.code){
         case 'KeyW':
              
-            keys.w.pressed=false;
+            keys.>.pressed=false;
         break;
 
         case 'KeyA':
              
-            keys.a.pressed=false;
+            keys.<.pressed=false;
         break;
         case 'KeyD':
              
-            keys.d.pressed=false;
+            keys.^.pressed=false;
         break;
     }
    
    });
    
+
 
 
